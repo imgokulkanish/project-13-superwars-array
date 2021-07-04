@@ -28,14 +28,13 @@ const initPlayers = (players) => {
     // Instead of forloop use Map method
     // Code here
     players.map((player, i) => {
-		let obj = {};
-		obj.name = player;
-		obj.strength = getRandomStrength();
-		obj.image = `images/super-${i + 1}.png`;
-		obj.type = getRandomStrength() >=40 ? "hero" : "villain";
-		detailedPlayers.push(obj);
+		let per = {};
+		per.name = player;
+		per.strength = getRandomStrength();
+		per.image = `images/super-${i + 1}.png`;
+		per.type = getRandomStrength() >=40 ? "hero" : "villain";
+		detailedPlayers.push(per);
 	});
-
 	return detailedPlayers;
 };
 
